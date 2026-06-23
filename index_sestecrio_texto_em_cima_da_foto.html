@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sestecrio | Elétrica e Hidráulica</title>
+  <meta name="description" content="Sestecrio Elétrica e Hidráulica. Serviços de elétrica, hidráulica, quadros de distribuição, medidores, manutenção e reformas no Rio de Janeiro e Grande Rio." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--azul:#062f75;--azul2:#021d49;--amarelo:#f7b414;--cinza:#f5f7fb;--texto:#1c2430;--branco:#fff;}
+    *{margin:0;padding:0;box-sizing:border-box} html{scroll-behavior:smooth}
+    body{font-family:'Montserrat',Arial,sans-serif;color:var(--texto);background:#fff;line-height:1.6;padding-top:125px}
+    a{text-decoration:none;color:inherit} img{max-width:100%;display:block}
+    .topbar{background:var(--azul2);color:white;font-size:14px;padding:10px 7%;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .topbar span{display:flex;align-items:center;gap:7px}.header{background:white;position:fixed;top:0;left:0;width:100%;z-index:100;box-shadow:0 4px 20px rgba(0,0,0,.08);transition:transform .35s ease}.header.hide{transform:translateY(-100%)}
+    .nav{padding:8px 7%;display:flex;justify-content:space-between;align-items:center;gap:30px}.logo{height:105px;width:auto;object-fit:contain}.menu{display:flex;gap:24px;font-weight:700;color:var(--azul);font-size:14px;text-transform:uppercase}.menu a:hover{color:var(--amarelo)}
+    .btn-whats{background:#25d366;color:white;padding:13px 20px;border-radius:999px;font-weight:800;box-shadow:0 10px 25px rgba(37,211,102,.25);display:inline-flex;align-items:center;gap:8px}.btn-whats:hover{transform:translateY(-2px)}
+    .hero{min-height:640px;background:linear-gradient(135deg,var(--azul2),var(--azul));color:white;display:flex;align-items:center;padding:70px 7%}.hero-grid{width:100%;display:grid;grid-template-columns:1.05fr .95fr;gap:38px;align-items:center}.hero-content{max-width:760px}.tag{color:var(--amarelo);font-weight:900;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}.hero h1{font-size:clamp(34px,5vw,68px);line-height:1.05;font-weight:900;text-transform:uppercase;margin-bottom:20px}.hero p{font-size:19px;max-width:660px;margin-bottom:30px;color:#eef4ff}.hero .sub-hero{font-size:28px;font-weight:800;color:#fff;margin-top:-10px;margin-bottom:14px;text-transform:uppercase;letter-spacing:1px}.hero-actions{display:flex;gap:14px;flex-wrap:wrap}.hero-side{display:flex;align-items:center;justify-content:center}.hero-photo{border-radius:26px;overflow:hidden;box-shadow:0 18px 45px rgba(0,0,0,.35);border:5px solid rgba(255,255,255,.18)}.hero-photo img{width:100%;height:520px;object-fit:cover;object-position:center}.hero-info{display:grid;gap:12px}.mini-info{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:16px}.mini-info b{color:var(--amarelo);display:block;text-transform:uppercase;margin-bottom:4px}.btn-outline{border:2px solid white;color:white;padding:13px 20px;border-radius:999px;font-weight:800}.btn-outline:hover{background:white;color:var(--azul)}
+    .hero-highlight{background:rgba(255,255,255,.98);color:var(--azul2);border-radius:28px;padding:34px;box-shadow:0 18px 45px rgba(0,0,0,.25);border-bottom:8px solid var(--amarelo);margin:26px 0}.hero-highlight .line-top{display:flex;align-items:center;justify-content:center;gap:14px;color:#617089;font-weight:800;text-transform:uppercase;letter-spacing:1px;font-size:18px}.hero-highlight .line-top:before,.hero-highlight .line-top:after{content:'';height:4px;background:var(--amarelo);border-radius:999px;flex:1;max-width:90px}.hero-highlight h2{text-align:center;color:var(--azul);font-size:clamp(28px,4vw,46px);line-height:1.12;font-weight:900;text-transform:uppercase;margin:12px 0 4px}.hero-benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}.hero-benefit{background:linear-gradient(135deg,var(--azul2),var(--azul));color:#fff;border-radius:18px;padding:16px;min-height:118px}.hero-benefit .icon{font-size:30px;line-height:1;margin-bottom:8px}.hero-benefit b{display:block;color:var(--amarelo);text-transform:uppercase;font-size:17px;line-height:1.15;margin-bottom:6px}.hero-benefit p{font-size:13px;color:#fff;margin:0;line-height:1.35}.worker-card{margin-top:18px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.15);border-radius:20px;padding:18px}.worker-card b{color:var(--amarelo);text-transform:uppercase;display:block;margin-bottom:6px}.worker-card p{font-size:15px;margin:0;color:#eef4ff}.info-list.four-columns{grid-template-columns:repeat(2,1fr)}
+    section{padding:80px 7%}.section-title{text-align:center;margin-bottom:45px}.section-title .small{color:var(--amarelo);font-weight:900;text-transform:uppercase;letter-spacing:2px}.section-title h2{font-size:clamp(28px,4vw,46px);color:var(--azul2);font-weight:900;text-transform:uppercase}.about{background:var(--cinza)}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:38px;align-items:center}.about-card{background:white;padding:34px;border-radius:22px;box-shadow:0 10px 30px rgba(0,0,0,.08);border-left:8px solid var(--amarelo)}.about-card h2{font-size:36px;color:var(--azul);line-height:1.1;margin-bottom:18px;text-transform:uppercase}.about-card p{margin-bottom:18px}.features{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:25px}.feature{background:var(--azul);color:white;padding:20px;border-radius:18px;text-align:center;font-weight:800}.feature b{color:var(--amarelo);display:block;font-size:22px}.about-img{border-radius:24px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.18)}.about-img img{height:520px;width:100%;object-fit:cover}
+    .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;max-width:1180px;margin:0 auto}.service-card{background:white;border-radius:22px;overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,.10);transition:transform .45s ease, box-shadow .45s ease, opacity .75s ease; border:1px solid #e9eef7;opacity:0;transform:translateY(45px) scale(.96)}.service-card.show{opacity:1;transform:translateY(0) scale(1)}.service-card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 18px 40px rgba(0,0,0,.16)}.service-card img{width:100%;height:300px;object-fit:cover;transition:transform .7s ease}.service-card:hover img{transform:scale(1.08)}.service-body{padding:22px}.service-body h3{font-size:22px;color:var(--azul);font-weight:900;text-transform:uppercase;line-height:1.25}.bar{width:70px;height:5px;background:var(--amarelo);border-radius:99px;margin-top:14px}
+    .info{background:linear-gradient(135deg,var(--azul2),var(--azul));color:white}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.info h2{font-size:42px;line-height:1.1;text-transform:uppercase;margin-bottom:18px}.info h2 span{color:var(--amarelo)}.info-list{display:grid;gap:14px;margin:25px 0}.info-item{background:rgba(255,255,255,.09);padding:18px;border-radius:16px;border:1px solid rgba(255,255,255,.13)}.info-item b{color:var(--amarelo)}.info-img{border-radius:24px;overflow:hidden;background:white;padding:8px}.info-img img{border-radius:18px;width:100%;height:520px;object-fit:cover;object-position:center}
+    .contact{background:var(--cinza)}.contact-box{max-width:1000px;margin:0 auto;background:white;border-radius:28px;padding:36px;box-shadow:0 14px 40px rgba(0,0,0,.10);display:grid;grid-template-columns:1fr 1fr;gap:25px}.contact h2{font-size:34px;color:var(--azul);text-transform:uppercase}.contact p{margin:12px 0}.contact-line{padding:16px;border-radius:15px;background:#f1f5fb;margin-top:12px;font-weight:700}.contact-line strong{color:var(--azul)}.footer{background:var(--azul2);color:white;text-align:center;padding:28px 7%;border-top:6px solid var(--amarelo)}.float-whats{position:fixed;right:18px;bottom:18px;background:#25d366;color:white;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 10px 30px rgba(0,0,0,.3);z-index:200}
+    @media(max-width:900px){.nav{padding:10px 5%;gap:10px}.logo{height:72px}.menu{display:flex;gap:12px;font-size:11px;white-space:nowrap;align-items:center}.hero,section{padding-left:5%;padding-right:5%}.hero-grid,.about-grid,.info-grid,.contact-box{grid-template-columns:1fr}.hero-side{display:flex}.hero-photo img{height:auto}.features{grid-template-columns:repeat(2,1fr)}.about-img img,.info-img img{height:auto}.services-grid{grid-template-columns:repeat(2,1fr);gap:16px}.service-card img{height:190px}.service-body{padding:16px}.service-body h3{font-size:16px}.topbar{padding:10px 5%}.hero{min-height:560px}}
+    @media(max-width:700px){.hero-benefits{grid-template-columns:1fr}.hero-highlight{padding:22px}.hero-highlight .line-top{font-size:14px}.info-list.four-columns{grid-template-columns:1fr}}
+    @media(max-width:520px){.services-grid{grid-template-columns:repeat(2,1fr);gap:12px}.service-card{border-radius:16px}.service-card img{height:145px}.service-body h3{font-size:13px}.bar{height:4px;width:45px}.hero h1{font-size:34px}.hero p{font-size:16px}.btn-whats,.btn-outline{width:100%;justify-content:center}.contact-box{padding:24px}.info h2,.about-card h2{font-size:28px}}
+    @media(max-width:520px){.nav{padding:8px 4%;gap:6px}.logo{height:62px}.menu{gap:7px;font-size:9.5px}.menu a{letter-spacing:0}.hero-side{margin-top:8px}}
+
+    /* ajuste texto topo celular */
+    @media(max-width:700px){
+      .hero-content{text-align:center;margin:0 auto;max-width:100%;}
+      .hero h1{font-size:34px;line-height:1.12;margin-bottom:8px;text-align:center;}
+      .hero .sub-hero{font-size:18px;line-height:1.25;margin-top:0;margin-bottom:4px;text-align:center;letter-spacing:.4px;}
+      .hero-content > p:not(.sub-hero){font-size:15px;line-height:1.35;margin:0 auto 18px;text-align:center;max-width:330px;}
+      .tag{text-align:center;font-size:12px;letter-spacing:1.4px;margin-bottom:10px;}
+      .hero-actions{justify-content:center;}
+    }
+  
+.titulo-fixo{text-align:center!important;}
+.titulo-fixo span{white-space:nowrap;display:inline-block;}
+@media(max-width:700px){
+  .titulo-fixo{font-size:26px!important;line-height:1.05!important;}
+  .titulo-fixo span{font-size:26px!important;white-space:nowrap;}
+}
+
+
+
+/* efeito movimento nos 4 quadradinhos da solução completa */
+.hero-benefit{
+  animation: sobeDesceBeneficio 3s ease-in-out infinite;
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.hero-benefit:nth-child(1){animation-delay:0s;}
+.hero-benefit:nth-child(2){animation-delay:.25s;}
+.hero-benefit:nth-child(3){animation-delay:.50s;}
+.hero-benefit:nth-child(4){animation-delay:.75s;}
+.hero-benefit:hover{
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 14px 28px rgba(0,0,0,.20);
+}
+@keyframes sobeDesceBeneficio{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+}
+
+
+/* ajustes solicitados: texto abaixo da foto e topo mais preenchido */
+.hero{padding-top:35px;padding-bottom:55px;}
+.hero-content{transform:translateY(-35px);}
+.hero-photo-wrap{width:100%;}
+.photo-caption{margin-top:14px;text-align:center;color:var(--amarelo);font-weight:900;letter-spacing:1.2px;text-transform:uppercase;font-size:18px;}
+@media(max-width:900px){
+  .hero-content{transform:none;}
+  .hero{padding-top:35px;}
+  .photo-caption{font-size:15px;line-height:1.3;margin-top:12px;}
+}
+@media(max-width:520px){
+  .hero{padding-top:26px;}
+  .photo-caption{font-size:13px;}
+}
+
+
+.photo-caption-top{
+  margin-bottom:14px;
+  text-align:center;
+  color:#f7b414;
+  font-weight:900;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  font-size:18px;
+}
+@media(max-width:900px){
+  .photo-caption-top{font-size:15px;margin-bottom:12px;}
+}
+@media(max-width:520px){
+  .photo-caption-top{font-size:13px;}
+}
+
+.foto-antes-contato{
+  padding:60px 7%;
+  background:#fff;
+}
+
+.foto-antes-contato img{
+  width:100%;
+  max-height:520px;
+  object-fit:cover;
+  border-radius:24px;
+  box-shadow:0 14px 40px rgba(0,0,0,.18);
+}
+
+/* ajuste modo computador: evita o texto Hidráulica encostar na imagem */
+@media(min-width:901px){
+  .hero-grid{
+    grid-template-columns:minmax(0,1fr) minmax(420px,.95fr);
+    gap:70px;
+  }
+  .hero-content{
+    max-width:680px;
+  }
+  .hero h1{
+    font-size:clamp(34px,4.2vw,56px);
+    line-height:1.08;
+  }
+  .titulo-fixo span{
+    font-size:inherit;
+  }
+}
+
+</style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="#inicio"><img src="logotres.jpeg" alt="Sestecrio Elétrica e Hidráulica" class="logo"></a>
+      <div class="menu"><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#contato">Contato</a></div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1 class="titulo-fixo">Sestecrio Instalação<br><span>Elétrica e Hidráulica</span></h1>
+          <p>Manutenção e instalação para residências e empresas.</p>
+
+          <div class="hero-highlight">
+            <div class="line-top">Do básico ao acabamento</div>
+            <h2>A solução completa para o seu lar ou empresa!</h2>
+            <div class="hero-benefits">
+              <div class="hero-benefit"><div class="icon">🛡️</div><b>Serviço de qualidade</b><p>Acabamento impecável e materiais de confiança.</p></div>
+              <div class="hero-benefit"><div class="icon">👷</div><b>Profissionais experientes</b><p>Equipe qualificada para cada tipo de serviço.</p></div>
+              <div class="hero-benefit"><div class="icon">🤝</div><b>Compromisso e confiança</b><p>Prazo combinado, serviço entregue!</p></div>
+              <div class="hero-benefit"><div class="icon">🏠</div><b>Residências e empresas</b><p>Atendemos toda a cidade do Rio de Janeiro e Região metropolitana.</p></div>
+            </div>
+          </div>
+
+          
+        </div>
+        <div class="hero-side">
+          <div class="hero-photo-wrap"><div class="photo-caption-top">Reformas com qualidade, compromisso e confiança</div><div class="hero-photo"><img src="serviço.jpeg.jpeg"></div></div>
+        </div>
+      </div>
+    </section>
+    <section id="servicos">
+      <div class="section-title"><h2>Nossos Serviços</h2></div>
+      <div class="services-grid">
+        <article class="service-card"><img src="eletrica.jpeg" alt="Serviço de elétrica"><div class="service-body"><h3>Elétrica</h3><div class="bar"></div></div></article>
+        <article class="service-card"><img src="hidraulica.jpeg" alt="Serviço de hidráulica"><div class="service-body"><h3>Hidráulica</h3><div class="bar"></div></div></article>
+        <article class="service-card"><img src="Revisão e identificação nos quadros elétricos da primeira.jpeg" alt="Revisão de quadros elétricos"><div class="service-body"><h3>Revisão e identificação nos quadros elétricos</h3><div class="bar"></div></div></article>
+        <article class="service-card"><img src="Instalação e fechamento do quadro de distribuição..jpeg" alt="Instalação de quadro de distribuição"><div class="service-body"><h3>Instalação e fechamento do quadro de distribuição</h3><div class="bar"></div></div></article>
+        <article class="service-card"><img src="Requerimento do medido de consumo residencial.jpeg" alt="Medidor de consumo residencial"><div class="service-body"><h3>Requerimento do medidor de consumo residencial</h3><div class="bar"></div></div></article>
+        <article class="service-card"><img src="Reforma do quadro de distribuição.jpeg" alt="Reforma de quadro de distribuição"><div class="service-body"><h3>Reforma do quadro de distribuição</h3><div class="bar"></div></div></article>
+      </div>
+    </section>
+<section class="foto-antes-contato">
+  <img src="resultado.jpeg" alt="Ambiente iluminado decorativo">
+</section>
+
+    
+    <section class="contact" id="contato">
+      <div class="contact-box">
+        <div><div class="section-title" style="text-align:left;margin-bottom:15px"><div class="small">Contato</div><h2>Fale conosco</h2></div><p>Precisa de elétrica, hidráulica ou reforma? Chame no WhatsApp para atendimento.</p><a class="btn-whats" href="https://wa.me/5521973548449?text=Olá,%20quero%20fazer%20um%20orçamento." target="_blank">Solicite seu orçamento</a></div>
+        <div><div class="contact-line"><strong>WhatsApp:</strong> (21) 97354-8449</div><div class="contact-line"><strong>Endereço:</strong> Av. Gal Costa, 650 - Recreio dos Bandeirantes</div><div class="contact-line"><strong>Atendimento:</strong> Rio de Janeiro e Grande Rio</div></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><p>© Sestecrio Elétrica e Hidráulica. Todos os direitos reservados.</p></footer>
+  <a class="float-whats" href="https://wa.me/5521973548449?text=Olá,%20quero%20fazer%20um%20orçamento." target="_blank">💬</a>
+
+  <script>
+    const serviceCards = document.querySelectorAll('.service-card');
+    const serviceObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.18 });
+
+    serviceCards.forEach((card, index) => {
+      card.style.transitionDelay = `${index * 120}ms`;
+      serviceObserver.observe(card);
+    });
+  </script>
+
+<script>
+let lastScroll = 0;
+const header = document.querySelector('.header');
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll > lastScroll && currentScroll > 100) {
+    header.classList.add('hide');
+  } else {
+    header.classList.remove('hide');
+  }
+  lastScroll = currentScroll;
+});
+</script>
+
+</body>
+</html>
